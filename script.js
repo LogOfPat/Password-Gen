@@ -26,7 +26,7 @@ function generatePassword() {
 
     // Set the password length to length specificed by user and initializes character set variable and password variable.
   var passLength = lengthInput;
-  var selectedCharacters = "";
+  var selectedCharacters = null;
   var password = "";
   // Assigns which characters to use in password
   if (lowerCase) {
@@ -43,7 +43,7 @@ function generatePassword() {
   }
   
   // Asks users to select characters
-  if(selectedCharacters === ""){
+  if(selectedCharacters === null){
     password = "You didn't select any characters!";
     return password;
   }
