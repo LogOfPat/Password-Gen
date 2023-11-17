@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+      
+      <div class="card">
+        <div class="card-header">
+          <h2>Generate a Password</h2>
+        </div>
+        <div class="card-body">
+          <div class="criteria">
+            <div class="criteria-header">
+              <!--The form to input the value of the length of the password-->
+              <p>Please enter a value between 8 and 128</p>
+              <form action="/action_page.php" class="input">
+                <label for="lengthInput"></label>
+                <input type="number" id="lengthInput" min="8" max="128"><br><br> 
+              </form>
+              <!--Lets users select what characters they want included in password-->
+              <div class="checkboxes">
+                <label for="lowerCase">Include lower case characters?</label>
+                <input type="checkbox" id="lowerCase"><br><br>
+                <label for="upperCase">Include lower case characters?</label>
+                <input type="checkbox" id="upperCase"><br><br>
+                <label for="numeric">Include lower case characters?</label>
+                <input type="checkbox" id="numeric"><br><br>
+                <label for="specialChar">Include lower case characters?</label>
+                <input type="checkbox" id="specialChar"><br><br>
+              </div>
+            </div>
+          </div>
+          <textarea
+            readonly
+            id="password"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+        </div>
+        <div class="card-footer">
+          <button id="generate" class="btn">Generate Password</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
